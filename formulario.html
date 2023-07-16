@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="./css/master.css">
+</head>
+<body>
+    <div id="conteiner">
+        <header id="barraDeNavegacion">
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Quienes Somos</a></li>
+                    <li><a href="./index.html">¿Por qué elegirnos?</a></li>
+                    <li><a href="./index.html">Propuesta Educativa</a></li>
+                    <li><a href="./index.html">Últimas Noticias</a></li>
+                    <li><a href="./formulario.html">Formulario de Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+        <section id="formularioContacto">
+        <img src="./img/img4.jpg" alt="fondoFormulario">
+        <h2 id="contactanos" class="destacado">Contáctanos</h2>
+        <form action="datos.php" method="get">
+            <div>
+                <label class="destacado" for="nombre">Nombre y Apellido</label>
+                <br>
+                <input type="text" name="nombre" value="" id="nombre" required placeholder="Indique su nombre y su apellido"
+                    minlength="6" maxlength="30" size="50">
+            </div>
+            <div>
+                <label class="destacado" for="email">E-mail</label>
+                <br>
+                <input type="text" name="email" value="" id="email" required placeholder="Indique su e-mail" size="50">
+            </div>
+            <div>
+                <label class="destacado" for="comentario">Comentarios</label>
+                <br>
+                <textarea name="comentario" id="comentario" cols="50" rows="10" required
+                    placeholder="Indique sus comentarios"></textarea>
+            </div>
+            <div>
+                <!--<input type="submit" value="Enviar comentarios">-->
+                <button type="submit">Enviar comentarios</button>
+            </div>
+        </form>
+        </section>
+        <footer id="piePagina">
+            <div id="redesSociales">
+                <h2>Redes Sociales</h2>
+                <div id="redes">
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Tik-Tok</a></li>
+                    </ul>
+                </div>
+                <figure>
+                    <!-- <img src="./img/redes1.png" alt="Instagram">
+                    <img src="./img/redes2.png" alt="Twitter">
+                    <img src="./img/redes3.png" alt="Tik-Tok"> -->
+                </figure>
+            </div>
+            <div id="nombreInstituto">
+                <h2>Untref School</h2>
+            </div>
+            <div id="contacto">
+                <h2>Contacto</h2>
+                <ul>
+                    <li>Dirección</li>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <li>E-mail</li>
+                    <p><a href="mailto:email@instituto.com">email@instituto.com</a></p>
+                    <li>Whatsapp</li>
+                    <p><a href="https://wa.me/1112223333" target="_blank">111-222-3333</a></p>
+                </ul>                
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
