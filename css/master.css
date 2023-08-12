@@ -1,132 +1,199 @@
 /*=== CSS Global ===*/
-*{
+:root {
+    --colorFondo: #181823;
+    --colorLetraGeneral: #eff5f5;
+    --colorLetraBanner: #fc7300;
+    --colorLetraOpciones: #1f8a70;
+    --colorLetraTitulosSecundarios: #00425a;
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-img{
+
+img {
     width: 100%;
+    padding-top: 20px;
 }
-ul{
+
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-body{
-    /* background-color: tomato; */
-    /* font-size: 10px ; /*Tamaño base, por defecto es 16px*/ 
+
+body {
+    /* font-size: 10px ; /*Tamaño base, por defecto es 16px*/
     font-family: 'Poppins', sans-serif;
-    background-color: #181823;
-    color: #eff5f5;
-}
-:root{
-    --color: #181823;
-    --color: #eff5f5;    
-    --color: #fc7300;
-    --color: #1f8a70;
-    --color: #00425a;
+    background-color: var(--colorFondo);
+    color: var(--colorLetraGeneral);
 }
 
 /*=== CSS Encabezado ===*/
-#encabezado{
-    display: flex;
-    background-color: hsla(196, 100%, 18%, 0.2);
-    z-index: 1;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    width: 100%;
-    height: 10%;
-}
-#menu{
-    text-align: center;
-}
-#opciones{
+#encabezado {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    text-transform: uppercase;
-    font-weight: bold;
+    background-color: hsla(196, 100%, 18%, 0.2);
+    z-index: 100;
+    width: 100%;
 }
+
+#menu {
+    text-align: center;
+    /*display: none;*/
+}
+
 ul#opciones li a {
-    color: #1f8a70;
+    color: var(--colorLetraOpciones);
+}
+
+#abrirMenu,
+#cerrarMenu {
+    display: none;
 }
 
 /*=== CSS Banner ===*/
-#banner{
+#banner {
     position: relative;
 }
-#imgBanner{
-    width: 100%;
-    height: 100vh;
+
+#imgBanner {
+    padding: 0;
 }
-#subtituloBanner{
+
+#subtituloBanner {
     position: absolute;
     text-align: center;
-    top: 50%;
     width: 100%;
-    font-family: 'Belanosima', sans-serif;
-    font-size: 3rem;
-    color: #FC7300;
-    background-color: #181823b3;
+    font-family: 'Belanosima';
+    color: var(--colorLetraBanner);
+    background-color: hsla(240, 19%, 12%, 0.702);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*=== CSS Titulos Pincipales y Titulos Secundarios ===*/
-#tituloSecun{
+#tituloSecun {
     text-decoration: underline;
-    padding: 6%;
     text-align: center;
     font-weight: bolder;
-    color: #FC7300;
+    color: var(--colorLetraBanner);
+    padding-bottom: 10px;
 }
 
-/*=== CSS Ultimas Noticias ===*/
-#noticias{
-    display: grid;
-    grid-template-columns: repeat(3,2fr);
-    padding-bottom: 2%;
-}
-#noticia{
-    padding: 2%;
-}
-article#noticia h3{
-    text-align: center;
-    padding-bottom: 1%;
+.secciones {
+    padding: 30px 20px;
 }
 
-/*=== CSS Pie de Pagina ===*/
-#piePagina{
-    padding: 1%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* Pie de pagina*/
+#piePagina {
     text-align: center;
     background-color: rgb(0, 66, 90, 0.2);
 }
 
-/*=== CSS Formulario ===*/
-#imgForm{
+footer div iframe {
+    height: 70%;
     width: 100%;
-    height: 100vh;
+    padding: 0 10px;
 }
 
-/*=== CSS Mobile First ===*/
-
-/*
-@media (min-width 320px) {
-   
+#tituloPie {
+    padding: 10px;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--colorLetraBanner);
 }
-@media (min-width 768px) {
+#imgRedes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    align-items: center;
+    padding: 20px;
+}
+#redes img {
+    width: 60%;
+    padding-top: 0;
+}
+
+/*=== CSS Responsive ===*/
+
+@media (min-width: 768px) {
+    #encabezado {
+        height: 60px;
+        align-items: center;
+        grid-template-columns: 5fr;
+        position: fixed;
+        background-color: hsla(196, 100%, 18%, 0.2);
+    }
+
+    #opciones {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    #abrirMenu,
+    #cerrarMenu {
+        display: none;
+    }
+
+    /*=== CSS Banner ===*/
+    #imgBanner {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #subtituloBanner {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    /*== CSS Secciones ===*/
+    #tituloSecun {
+        padding-bottom: 30px;
+    }
+
+    .secciones {
+        padding: 60px 20px;
+    }
+
+    /*=== CSS Ultimas Noticias ===*/
+    #noticias {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        padding-bottom: 2%;
+    }
+
+    #noticia {
+        padding: 2%;
+    }
+
+    article#noticia h3 {
+        text-align: center;
+        padding-bottom: 1%;
+    }
+
+    /*=== CSS Pie de Pagina ===*/
+    #piePagina {
+        padding: 1%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        background-color: rgb(0, 66, 90, 0.2);
+    }
+
+    /*=== CSS Formulario ===*/
+    #imgForm {
+        width: 100%;
+        height: 100vh;
+    }
 
 }
-/*
-@media (min-width 1200px) {
-    
-} */
-
-/*
-#FC7300 LETRA Banner (Naranja)
-#1F8A70 LETRA Opciones (celeste)
-#00425A LETRA Titulos Secundarios (azul)
-#181823 FONDO (azul oscuro)
-#EFF5F5 LETRA General (blanco)
-*/

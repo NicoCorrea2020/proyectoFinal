@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap">
 </head>
+
 <body>
     <div id="conteiner">
         <header id="encabezado">
@@ -24,67 +26,69 @@
             </div>
         </header>
         <section id="banner">
-            <img id="imgForm" src="./img/img4.jpg" alt="fondoFormulario">
+            <img id="imgBanner" src="./img/img4.jpg" alt="fondoFormulario">
             <h1 id="subtituloBanner">INSTITUTO UNTREF SCHOOL</h1>
         </section>
-        <section id="formularioContacto">
-            
+        <section id="formularioContacto" class="secciones">
+
             <h2 id="tituloSecun" class="destacado">Contáctanos</h2>
-        <form action="datos.php" method="get">
-            <div>
-                <label class="destacado" for="nombre">Nombre y Apellido</label>
-                <br>
-                <input type="text" name="nombre" value="" id="nombre" required placeholder="Indique su nombre y su apellido"
-                    minlength="6" maxlength="30" size="50">
-            </div>
-            <div>
-                <label class="destacado" for="email">E-mail</label>
-                <br>
-                <input type="text" name="email" value="" id="email" required placeholder="Indique su e-mail" size="50">
-            </div>
-            <div>
-                <label class="destacado" for="comentario">Comentarios</label>
-                <br>
-                <textarea name="comentario" id="comentario" cols="50" rows="10" required
-                    placeholder="Indique sus comentarios"></textarea>
-            </div>
-            <div>
-                <!--<input type="submit" value="Enviar comentarios">-->
-                <button type="submit">Enviar comentarios</button>
-            </div>
-        </form>
+            <form id="formulario" action="datos.php" method="get">
+                <div>
+                    <label class="destacado" for="nombre">Nombre y Apellido</label>
+                    <br>
+                    <input type="text" name="nombre" value="" id="nombre" required
+                        placeholder="Indique su nombre y su apellido" minlength="6" maxlength="30" size="35">
+                </div>
+                <div>
+                    <label class="destacado" for="email">E-mail</label>
+                    <br>
+                    <input type="text" name="email" value="" id="email" required placeholder="Indique su e-mail"
+                        size="35">
+                </div>
+                <div>
+                    <label class="destacado" for="comentario">Comentarios</label>
+                    <br>
+                    <textarea name="comentario" id="comentario" cols="35" rows="10" required
+                        placeholder="Indique sus comentarios"></textarea>
+                </div>
+                <div>
+                    <!--<input type="submit" value="Enviar comentarios">-->
+                    <button type="submit">Enviar comentarios</button>
+                </div>
+            </form>
         </section>
-        <footer id="piePagina">
+        <footer id="piePagina" class="secciones">
             <div id="redesSociales">
-                <h2 id="tituloSecun">Redes Sociales</h2>
+                <h2 id="tituloPie">Redes Sociales</h2>
                 <div id="redes">
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Tik-Tok</a></li>
+                    <ul id="imgRedes">
+                        <li><a href="https://instagram.com" target="_blank"> <img src="./img/redes1.png"
+                                    alt="Instagram"></a></li>
+                        <li><a href="https://twitter.com" target="_blank"> <img src="./img/redes2.png" alt="Twitter">
+                            </a></li>
+                        <li><a href="https://tiktok.com" target="_blank"> <img src="./img/redes3.png" alt="Tik-Tok">
+                            </a></li>
                     </ul>
                 </div>
-                <figure>
-                    <!-- <img src="./img/redes1.png" alt="Instagram">
-                    <img src="./img/redes2.png" alt="Twitter">
-                    <img src="./img/redes3.png" alt="Tik-Tok"> -->
-                </figure>
             </div>
             <div id="nombreInstituto">
-                <h2 id="tituloSecun">Untref School</h2>
+                <h2 id="tituloPie">Untref School</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52544.69695872167!2d-58.56751200000001!3d-34.60306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb9f8ff113%3A0x22fd08da6711928d!2sUniversidad%20Nacional%20de%20Tres%20de%20Febrero%20-%20Sede%20Caseros%20I!5e0!3m2!1ses!2sar!4v1691872494770!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div id="contacto">
-                <h2 id="tituloSecun">Contacto</h2>
+                <h2 id="tituloPie">Contacto</h2>
                 <ul>
-                    <li>Dirección</li>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                     <li>E-mail</li>
                     <p><a href="mailto:email@instituto.com">email@instituto.com</a></p>
                     <li>Whatsapp</li>
                     <p><a href="https://wa.me/1112223333" target="_blank">111-222-3333</a></p>
-                </ul>                
+                </ul>
             </div>
         </footer>
     </div>
 </body>
+
 </html>
