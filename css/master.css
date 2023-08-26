@@ -33,12 +33,22 @@ body {
     color: var(--colorLetraGeneral);
 }
 
+/*=== CSS Titulos Pincipales y Titulos Secundarios ===*/
+#tituloSecun {
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--colorLetraBanner);
+    padding-bottom: 10px;
+}
+
 /*=== CSS Encabezado ===*/
 #encabezado {
     display: grid;
     background-color: hsla(196, 100%, 18%, 0.2);
     z-index: 100;
     width: 100%;
+    position: fixed;
 }
 
 #menu {
@@ -50,14 +60,10 @@ ul#opciones li a {
     color: var(--colorLetraOpciones);
 }
 
-#abrirMenu,
-#cerrarMenu {
-    display: none;
-}
-
 /*=== CSS Banner ===*/
 #banner {
     position: relative;
+    z-index: 50;
 }
 
 #imgBanner {
@@ -76,20 +82,18 @@ ul#opciones li a {
     transform: translate(-50%, -50%);
 }
 
-/*=== CSS Titulos Pincipales y Titulos Secundarios ===*/
-#tituloSecun {
-    text-decoration: underline;
-    text-align: center;
-    font-weight: bolder;
-    color: var(--colorLetraBanner);
-    padding-bottom: 10px;
+/*=== CSS Boton Volver al Inicio ===*/
+
+#volverInicio a {
+    font-size: 50px;
+    color: hsl(180, 23%, 95%, 0.4);
+    position: fixed;
+    z-index: 49;
+    right: 5%;
+    top: 85%;
 }
 
-.secciones {
-    padding: 30px 20px;
-}
-
-/* Pie de pagina*/
+/*=== CSS Pie de Página ===*/
 #piePagina {
     text-align: center;
     background-color: rgb(0, 66, 90, 0.2);
@@ -108,18 +112,87 @@ footer div iframe {
     font-weight: bolder;
     color: var(--colorLetraBanner);
 }
+
 #imgRedes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);    
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: 20px;
 }
+
 #redes img {
     width: 60%;
     padding-top: 0;
 }
 
-/*=== CSS Responsive ===*/
+/*=== CSS Responsive - Media query's ===*/
+
+@media (max-width: 767px) {
+
+    /*=== CSS Menú hamburguesa ===*/
+    #encabezado {
+        height: 60px;
+    }
+
+    .botones {
+        font-size: 50px;
+        color: var(--colorLetraGeneral);
+        float: right;
+        line-height: 80px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    ul#opciones {
+        width: 100%;
+        height: auto;
+        background-color: hsla(196, 100%, 18%, 0.95);
+        padding: 70px 10px 30px;
+        margin-left: 100%;
+    }
+
+    ul#opciones li {
+        margin: 10px;
+    }
+
+    ul#opciones li a {
+        color: var(--colorLetraGeneral);
+        text-transform: uppercase;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    #close {
+        display: none;
+    }
+
+    #btnOpen:checked~ul#opciones {
+        margin-left: 0%;
+    }
+
+    #btnOpen:checked~#open {
+        display: none;
+    }
+
+    #btnOpen:checked~#close {
+        display: block;
+    }
+
+    /*=== CSS Secciones ===*/
+    .secciones {
+        padding: 60px 20px 10px;
+    }
+
+    #volverInicio a {
+        right: 6%;
+    }
+
+    #piePagina {
+        padding: 5% 0%;
+    }
+}
 
 @media (min-width: 768px) {
     #encabezado {
@@ -137,8 +210,9 @@ footer div iframe {
         font-weight: bold;
     }
 
-    #abrirMenu,
-    #cerrarMenu {
+    .botones,
+    #btnOpen,
+    #btnClose {
         display: none;
     }
 
@@ -149,10 +223,6 @@ footer div iframe {
     }
 
     #subtituloBanner {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
         font-size: 3rem;
     }
 
@@ -183,11 +253,9 @@ footer div iframe {
 
     /*=== CSS Pie de Pagina ===*/
     #piePagina {
-        padding: 1%;
+        padding: 2% 0%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        text-align: center;
-        background-color: rgb(0, 66, 90, 0.2);
     }
 
     /*=== CSS Formulario ===*/
