@@ -98,6 +98,17 @@ ul#opciones li a {
     text-align: center;
     background-color: rgb(0, 66, 90, 0.2);
 }
+#contacto ul{
+    padding: 10px;
+}
+#contacto ul p a {
+    color: var(--colorLetraOpciones);
+    font-weight: bold;
+    padding: 10px;
+}
+#logoContacto {
+    font-size: 25px;
+}
 
 footer div iframe {
     height: 70%;
