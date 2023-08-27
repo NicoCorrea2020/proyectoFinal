@@ -98,14 +98,22 @@ ul#opciones li a {
     text-align: center;
     background-color: rgb(0, 66, 90, 0.2);
 }
-#contacto ul{
+
+#logoUntref {
+    width: 20%;
+    padding: 0;
+}
+
+#contacto ul {
     padding: 10px;
 }
+
 #contacto ul p a {
     color: var(--colorLetraOpciones);
     font-weight: bold;
     padding: 10px;
 }
+
 #logoContacto {
     font-size: 25px;
 }
@@ -113,7 +121,7 @@ ul#opciones li a {
 footer div iframe {
     height: 70%;
     width: 100%;
-    padding: 0 10px;
+    padding: 5px 10px;
 }
 
 #tituloPie {
@@ -122,18 +130,24 @@ footer div iframe {
     text-align: center;
     font-weight: bolder;
     color: var(--colorLetraBanner);
+    display: none;
 }
 
 #imgRedes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    padding: 20px;
 }
 
-#redes img {
-    width: 60%;
+#imgRedes li img {
+    width: 60px;
     padding-top: 0;
+}
+
+#contacto,
+#redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 /*=== CSS Responsive - Media query's ===*/
@@ -145,11 +159,16 @@ footer div iframe {
         height: 60px;
     }
 
+    #menu nav #logoUntref {
+        width: 60px;
+        float: left;
+        margin-left: 20px;
+    }
+
     .botones {
         font-size: 50px;
         color: var(--colorLetraGeneral);
         float: right;
-        line-height: 80px;
         margin-right: 20px;
         cursor: pointer;
     }
@@ -157,9 +176,10 @@ footer div iframe {
     ul#opciones {
         width: 100%;
         height: auto;
-        background-color: hsla(196, 100%, 18%, 0.95);
-        padding: 70px 10px 30px;
-        margin-left: 100%;
+        background-color: hsla(196, 100%, 18%, 0.80);
+        padding: 66px 10px 10px;
+        /*margin-left: 100%;*/
+        display: none;
     }
 
     ul#opciones li {
@@ -180,7 +200,8 @@ footer div iframe {
     }
 
     #btnOpen:checked~ul#opciones {
-        margin-left: 0%;
+        /*margin-left: 0%;*/
+        display: block;
     }
 
     #btnOpen:checked~#open {
@@ -224,6 +245,10 @@ footer div iframe {
     .botones,
     #btnOpen,
     #btnClose {
+        display: none;
+    }
+
+    #menu nav #logoUntref {
         display: none;
     }
 
