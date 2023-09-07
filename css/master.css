@@ -86,11 +86,12 @@ ul#opciones li a {
 
 #volverInicio a {
     font-size: 50px;
-    color: hsl(180, 23%, 95%, 0.4);
+    color: var(--colorLetraGeneral);
     position: fixed;
     z-index: 49;
     right: 5%;
     top: 85%;
+    opacity: 0.3;
 }
 
 /*=== CSS Pie de Página ===*/
@@ -232,7 +233,6 @@ footer div iframe {
         align-items: center;
         grid-template-columns: 5fr;
         position: fixed;
-        background-color: hsla(196, 100%, 18%, 0.2);
     }
 
     #opciones {
